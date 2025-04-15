@@ -1,0 +1,20 @@
+preprocessing:
+  max_points: 30000
+  image_size: [1024, 1024]
+
+model:
+  checkpoint_path: "checkpoints/sam_vit_h_4b8939.pth"
+  type: "vit_h"
+
+data:
+  pcd_dir: "data/kitti_converted/pcd"
+
+training:
+  batch_size: 2
+  num_workers: 1
+  learning_rate: 1.0e-5
+  weight_decay: 0.01
+  num_epochs: 10
+  log_interval: 10
+  save_interval: 1
+  checkpoint_dir: "checkpoints"
